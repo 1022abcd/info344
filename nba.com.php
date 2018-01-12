@@ -12,10 +12,12 @@
         <p>Search Your Player: <input type='text' name="playerName"><input type="submit" value="Submit"></p>
     </form>
     <?php
-        include 'databaseAccess.php';
-
+        include 'nbaPlayer.php';
         
-
+        $playerArray = Player::getAllplayers();
+        for($i = 0; $i < count($playerArray); $i++){
+            echo $playerArray[$i]->GetName();
+        }
     ?>
 </body>
 </html>

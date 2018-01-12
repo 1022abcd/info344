@@ -8,10 +8,8 @@
 </head>
 <body>
 
-    <form action="databaseAccess.php" target="_blank" method ='GET'>
-        <h1>Search Your Player </h1>
-        <input type = 'text' name="searchPlayer">
-        <input type "submit" value="Submit">
+    <form action="databaseAccess.php" method ='GET'>
+        <p>Search Your Player: <input type='text' name="playerName"><input type="submit" value="Submit"></p>
     </form>
     <?php
         include 'databaseAccess.php';

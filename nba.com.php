@@ -7,6 +7,12 @@
     <title>NBA PA1</title>
 </head>
 <body>
+
+    <form action="databaseAccess.php" target="_blank" method ='GET'>
+        <h1>Search Your Player </h1>
+        <input type = 'text' name="searchPlayer">
+        <input type "submit" value="Submit">
+    </form>
     <?php
         include 'databaseAccess.php';
 

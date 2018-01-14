@@ -1,6 +1,6 @@
 
 <?php
-    function returnList(){
+function listOfSearchingPlayers($inputFromUser) {
         $username = 'info344user';
         $password = '<password>';
 
@@ -17,8 +17,9 @@
                 array_push($playerNameArray, $split[1]);
             }
 
-            if(isset($_GET['playerName'])) {
-                $input = $_GET['playerName'];
+            // if(isset($_GET['playerName'])) {
+            //     $input = $_GET['playerName'];
+                $input = $inputFromUser;
                 $closest = "";
                 $shortest = -1;
                 foreach($playerNameArray as $playerName) {
@@ -29,7 +30,6 @@
                         break;
                     }
                     if ($lev <= $shortest || $shortest < 0) {
-                        // set the closest match, and shortest distance
                         $closest  = $playerName;
                         $shortest = $lev;
                     }
@@ -41,12 +41,8 @@
                 $stmt->execute();
                 $players = $stmt->fetchAll();
                 $playersResult = array();
-                //print_r(array_values($players));
+                
                 include 'nbaPlayer.php';
-                // foreach($players as $player) {
-                //     print_r($player);
-                // }
-
                 foreach($players as $player) {
                     $eachPlayer = new Player($player[0], $player[1], $player[2], $player[3], $player[4],
                     $player[5], $player[6], $player[7], $player[8], $player[9], $player[10], $player[11], $player[12],
@@ -54,9 +50,11 @@
                     $player[21]);
                     array_push($playersResult, $eachPlayer);
                 }
-                //print_r(array_values($playersResult));
+                echo "CHECKING DATABASEACCESS.PHP";
+                print_r(array_values($playersResult));
+                
                 //return $playersResult;
-            }
+            //}
             
         } catch(PDOException $e) {
             echo 'ERROR: ' . $e->getMessage();

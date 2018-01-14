@@ -8,20 +8,13 @@
 </head>
 <body>
 
-    <form action="databaseAccess.php" method ='GET'>
+    <form action="form.php" method ='GET'>
         <p>Search Your Player: <input type='text' name="playerName"><input type="submit" value="Submit"></p>
     </form>
     <?php
+        include 'form.php';
         //include 'databaseAccess.php';
-        include 'nbaPlayer.php';
-        
-        //print_r(array_values(returnList()));
-        //print_r(array_values($list));
-        $playerArray = Player::getAllplayers();
-        print_r(array_values($playerArray));
-        // for($i = 0; $i < count($playerArray); $i++){
-        //     echo $playerArray[$i]->GetInfo();
-        // }
+
     ?>
 </body>
 </html>

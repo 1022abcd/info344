@@ -1,0 +1,49 @@
+
+Launched EC2 and RDS using 'AWS setup guide'
+    -Selected AMI Linux EC2 micro-instance
+    -Set up inbound security settings in the Security groups
+
+Created a index.php file and uploaded in the Filezilla 
+    -Added my pem key from AWS to the SFTP
+    -Created new site from site manager
+        -Using my EC2 Public DNS
+    -Uploaded my index.php file I created 
+
+Followed and run the code "awssetup.txt" on terminal to setup my EC2
+
+Using my public dns/index.php to check if it's successfully connected to EC2
+
+Launching RDS MySQL relational database on AWS
+    -Instance with Micro-instance, 20GB, Single-Zone Availability
+    -Set up username and password 
+
+Change the config file in the xampp phpmyadmin folder
+    -Inserted my host, username, password information to connect to the RDS
+
+Uploaded given NBA csv file in the database
+    -phpmyadmin -> RDS -> import 
+
+Started writing some codes.
+
+    nba.com.php 
+        -Contains many sources and scripts
+        -Has simple navigation bar, search bar and submit button
+        -User's query will be sent to other files using form<method='GET'>
+
+    databaseAccess.php
+        -Used PDO to connect to the database;
+        -Used 'isset()' method to check the query
+        -Used SQL statements to filter out of what user wants to find (raw data)
+        -Connected to nbaPlayer.php by 'include nbaPlayer.php'
+        -Converted filtered raw data in to a class object
+        -Using methods from 'nbaPlayer.php' to print out the result
+
+    nbaPlayer.php
+        -Class object includes player's stats
+        -Has many functions that print out the result
+    
+    nba.com.class   
+        -For better organization and layouts
+
+    fetch.php
+        -Used Ajax to show some possible inputs when the user types

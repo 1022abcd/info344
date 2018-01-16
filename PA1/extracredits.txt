@@ -1,0 +1,17 @@
+
+EXTRA CREDIT
+
+    Misspelled names work gracefully*
+        -Created a function in mysql called 'levenshtein(st,st2)'
+        from https://snippets.aktagon.com/snippets/610-levenshtein-distance-for-mysql
+        -Used the method to solve misspelled name problems
+    AJAX search button
+        -Used fetch.php and scripts at the bottom of nba.com.php file 
+        add some features of live search engine which retrieves the user's query
+        and compare with the results in json format.
+    Results page looks really really nice (CSS) **
+        -Added some css to make better layouts and UI
+    Embedded photos of player
+        -Photo of a player clearly shows on the screen
+    Embedded youtube videos about player
+        -Added a hyperlink which navigates the user to the player's highlights

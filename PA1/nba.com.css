@@ -1,0 +1,45 @@
+.score{
+	background-color: gray;
+	color: white;
+	padding: 0 20 0 20px;
+}
+
+.infoBox{
+	background-color: gainsboro;
+	margin: auto;
+	padding: auto;
+	border-bottom: 1px solid gray;
+}
+
+.content {
+    font-size: 0px;
+    align-content: left;
+}
+
+li {
+    display:inline;
+    padding-top: 10px;
+    padding: 5px;
+    align-content: left;
+}
+
+#getName {
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#getTeam {
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+#row {
+    align-items: center;
+}
+
+#hyperlink {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
